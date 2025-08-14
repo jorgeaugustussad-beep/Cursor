@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Universo Sci‑Fi - Cadastro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-logo" aria-hidden="true">✦</div>
+      <div class="brand-text">
+        <h1>Universo Sci‑Fi</h1>
+        <p>Cadastro de Galáxias, Sistemas, Corpos Celestes, Cidades e Personagens</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button id="btn-export" class="btn secondary" title="Exportar JSON">Exportar</button>
+      <label class="btn secondary file-label" title="Importar JSON">
+        Importar
+        <input id="input-import" type="file" accept="application/json" hidden>
+      </label>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-toolbar">
+        <button id="btn-add-galaxy" class="btn primary">+ Galáxia</button>
+      </div>
+      <nav class="tree" id="tree"></nav>
+    </aside>
+
+    <section class="content" id="content">
+      <div class="welcome">
+        <h2>Bem‑vindo ao seu Universo</h2>
+        <p>Comece criando uma <strong>Galáxia</strong>. Dentro dela crie <strong>Sistemas Estelares</strong>, depois cadastre <strong>Planetas</strong>, <strong>Luas</strong> e <strong>Asteróides</strong>. Em cada corpo celeste, crie <strong>Cidades</strong>. Em cada cidade, cadastre <strong>Personagens</strong> e defina <strong>Populações</strong> com múltiplos tipos, com total automático e gráfico de pizza.</p>
+        <ul>
+          <li>Edite e exclua qualquer item.</li>
+          <li>Transfira <strong>Personagens</strong> entre planetas/luas/asteróides.</li>
+          <li>Os dados ficam salvos no seu navegador (localStorage).</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal-overlay" class="modal-overlay hidden" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <h3 id="modal-title"></h3>
+        <button id="modal-close" class="icon-btn" aria-label="Fechar">✕</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+      <div class="modal-footer" id="modal-footer"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
