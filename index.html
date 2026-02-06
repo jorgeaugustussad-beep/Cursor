@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crônicas da Colonização Estelar</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Crônicas da Colonização Estelar</h1>
+      <div class="topbar-controls">
+        <button id="new-game-btn">Novo Jogo</button>
+        <button id="save-btn">Salvar</button>
+        <button id="load-btn">Carregar</button>
+        <button id="next-turn-btn">Próximo Turno</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel resources-panel">
+        <h2>Recursos</h2>
+        <div id="resources-list" class="list"></div>
+
+        <h2>Facção</h2>
+        <div id="faction-info" class="list"></div>
+
+        <h2>Diplomacia</h2>
+        <div id="diplomacy-list" class="list"></div>
+      </section>
+
+      <section class="map-panel panel">
+        <h2>Mapa Estelar</h2>
+        <canvas id="star-map" width="900" height="560"></canvas>
+        <div id="map-tooltip" class="tooltip hidden"></div>
+      </section>
+
+      <section class="panel management-panel">
+        <h2>Sistema Selecionado</h2>
+        <div id="system-details" class="list">Nenhum sistema selecionado.</div>
+
+        <h2>Personagens</h2>
+        <div id="characters-list" class="list"></div>
+
+        <h2>Eventos</h2>
+        <div id="events-log" class="list"></div>
+      </section>
+    </main>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
